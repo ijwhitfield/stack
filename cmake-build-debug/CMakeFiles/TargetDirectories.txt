@@ -1,0 +1,4 @@
+/Users/ian/CLionProjects/stack/cmake-build-debug/CMakeFiles/stack.dir
+/Users/ian/CLionProjects/stack/cmake-build-debug/CMakeFiles/copy_resources.dir
+/Users/ian/CLionProjects/stack/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/ian/CLionProjects/stack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
