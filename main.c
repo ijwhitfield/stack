@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <stdint.h>
 #include <math.h>
 #include <assert.h>
@@ -13,19 +12,6 @@
 #define BASE_POINTS 30
 
 static const Color colors[] = {RED, GREEN, BLUE, VIOLET};
-
-//typedef struct {
-//    Vector2 position;
-//    Vector2 velocity;
-//    float opacity;
-//    uint64_t points;
-//} PointParticle;
-
-typedef struct {
-    Vector2 position;
-    Vector2 velocity;
-    Color color;
-} BlockParticle;
 
 typedef struct {
     int8_t next;
@@ -63,9 +49,6 @@ int main(void) {
     for (int i = 0; i < STACK_SIZE; i++) {
         holding.stack[i] = -1;
     }
-
-//    PointParticle pointParticles[64] = {0};
-    unsigned int pointParticleIndex = 0;
 
     /* gamestate variables */
     float growSpeed = BASE_SPEED;
@@ -160,26 +143,6 @@ int main(void) {
                 }
             }
         }
-
-        /* do physics */
-//        for (int i = 0; i < STACK_COUNT; i++) {
-//            for (int j = 0; j < STACK_SIZE; j++) {
-//                stacks[i].velocities[j] -= 1.0f * frameTime;
-//                stacks[i].positions[j] += stacks[i].velocities[j] * frameTime;
-//                float miny = stacks[i].offset + (j * blockSize);
-//                if (stacks[i].positions[j] < miny) {
-//                    stacks[i].positions[j] = miny;
-//                    stacks[i].velocities[j] = 0.0f;
-//                }
-//            }
-//        }
-//        for (int i = 0; i < 64; i++) {
-//            pointParticles[i].velocity.y += 1.0f * frameTime;
-//            pointParticles[i].position.y += pointParticles[i].velocity.y * frameTime;
-//            pointParticles[i].position.x += pointParticles[i].velocity.x * frameTime;
-//            pointParticles[i].opacity -= 0.1f * frameTime;
-//        }
-
 
         /* handle window resizes */
         if (IsWindowResized()) {
